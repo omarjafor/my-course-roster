@@ -1,3 +1,6 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import Cart from "../Cart/Cart";
@@ -22,7 +25,7 @@ const Home = () => {
         const isAdded = selectedCourse.find(crs => (crs.id == course.id))
 
         if (isAdded) {
-           return alert('Already Added! Try Another Course')
+            return toast('Already Added! Try Another Course')
         } else {
             selectedCourse.forEach(price => {
                 totalsPrice += price.price;
@@ -34,7 +37,7 @@ const Home = () => {
         }
         remainCredit -= temp;
         if(remainCredit < 0){
-            alert('Your Credit Exceded')
+            toast('Your Credit Hours Exceded')
         }else{
             setRemaining(remainCredit);
             setTotalPrice(totalsPrice);
@@ -43,8 +46,8 @@ const Home = () => {
         }
     }
     return (
-        <div className="flex">
-            <div className="grid grid-cols-3 gap-6">
+        <div className="flex flex-col gap-6 md:gap-6 lg:gap-0 md:flex-col lg:flex-row">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     courses.map(course => (<Card
                         key={course.id}
@@ -52,6 +55,7 @@ const Home = () => {
                         handleAddCourse={handleAddCourse}
                     ></Card>))
                 }
+                <ToastContainer />
             </div>
             <div>
                 <Cart
