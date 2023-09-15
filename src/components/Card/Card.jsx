@@ -1,4 +1,4 @@
-const Card = ({course}) => {
+const Card = ({ course, handleAddCourse }) => {
     const {image, name, price, credit, about} = course;
     
     return (
@@ -11,11 +11,11 @@ const Card = ({course}) => {
                     {about}
                 </p>
                 <div className="flex justify-around my-2 font-medium text-base gap-3 text-[#1C1B1B99]">
-                    <p><img className="inline-block mr-2" src="../../../public/dollar.svg" alt="" width="24px" height="24px" />Price : {price}</p>
-                    <p><img className="inline-block mr-2" src="../../../public/credit.svg" alt="" width="24px" height="24px" />Credit : {credit}hr</p>
+                    <p><img className="inline-block mr-2" src="https://i.ibb.co/552J5h3/dollar.jpg" alt="" width="24px" height="24px" />Price : {price}</p>
+                    <p><img className="inline-block mr-2" src="https://i.ibb.co/x1XRX2K/credit.jpg" alt="" width="24px" height="24px" />Credit : {credit}hr</p>
                 </div>
             </div>
-            <button
+            <button onClick={() => handleAddCourse(course)}
                 className="w-full font-semibold rounded-lg p-2 mt-1 bg-[#2F80ED] text-white cursor-pointer text-lg"
             >Select</button>
         </div>
