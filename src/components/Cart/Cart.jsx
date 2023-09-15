@@ -1,4 +1,4 @@
-const Cart = ({ selectedCourse, totalCredit }) => {
+const Cart = ({ selectedCourse, totalCredit, totalPrice }) => {
     return (
         <div>
             <div className="md:ml-0 lg:ml-6 shadow-lg rounded-xl bg-[#FFF] p-6">
@@ -10,7 +10,7 @@ const Cart = ({ selectedCourse, totalCredit }) => {
                     }
                 </div>
                 <h2 className="text-[#1C1B1BCC] font-semibold pb-4 mt-4 border-b border-solid border-[#11111126]">Total Credit Hour : {totalCredit} </h2>
-                <h2 className="text-[#1C1B1BCC] font-semibold pb-4 mt-4">Total Price : 48000 USD</h2>
+                <h2 className="text-[#1C1B1BCC] font-semibold pb-4 mt-4">Total Price : {totalPrice} USD</h2>
             </div>
         </div>
     );

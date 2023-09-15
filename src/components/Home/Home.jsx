@@ -5,7 +5,8 @@ import Cart from "../Cart/Cart";
 const Home = () => {
     const [courses, setCourses] = useState([]);
     const [selectedCourse, setSelectedCourse] = useState([]);
-    const [totalCredit, setTotalCredit] = useState([])
+    const [totalCredit, setTotalCredit] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(0)
 
     useEffect(() => {
         fetch('data.json')
@@ -15,9 +16,16 @@ const Home = () => {
 
     const handleAddCourse = course => {
         let temp = course.credit;
+        let totalsPrice = course.price;
+        selectedCourse.forEach(price => {
+            totalsPrice += price.price;
+        })
+
         selectedCourse.forEach(courseItem => {
             temp += courseItem.credit;
         })    
+
+        setTotalPrice(totalsPrice);
         setTotalCredit(temp);
         setSelectedCourse([...selectedCourse, course]);
     }
@@ -35,7 +43,8 @@ const Home = () => {
             <div>
                 <Cart
                     selectedCourse = {selectedCourse}
-                    totalCredit={totalCredit}
+                    totalCredit = {totalCredit}
+                    totalPrice = {totalPrice}
                 ></Cart>
             </div>
         </div>
