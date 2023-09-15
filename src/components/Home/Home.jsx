@@ -19,19 +19,28 @@ const Home = () => {
         let temp = course.credit;
         let totalsPrice = course.price;
         let remainCredit = 20;
-        selectedCourse.forEach(price => {
-            totalsPrice += price.price;
-        })
+        const isAdded = selectedCourse.find(crs => (crs.id == course.id))
 
-        selectedCourse.forEach(courseItem => {
-            temp += courseItem.credit;
-        })    
+        if (isAdded) {
+           return alert('Already Added! Try Another Course')
+        } else {
+            selectedCourse.forEach(price => {
+                totalsPrice += price.price;
+            })
 
+            selectedCourse.forEach(courseItem => {
+                temp += courseItem.credit;
+            })
+        }
         remainCredit -= temp;
-        setRemaining(remainCredit);
-        setTotalPrice(totalsPrice);
-        setTotalCredit(temp);
-        setSelectedCourse([...selectedCourse, course]);
+        if(remainCredit < 0){
+            alert('Your Credit Exceded')
+        }else{
+            setRemaining(remainCredit);
+            setTotalPrice(totalsPrice);
+            setTotalCredit(temp);
+            setSelectedCourse([...selectedCourse, course]);
+        }
     }
     return (
         <div className="flex">
