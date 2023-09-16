@@ -5,7 +5,7 @@
     "name": "Introduction to C Programming",
     "credit": 1,
     "price": 15000,
-    "about": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    "about": "Introduction to C Language. C is a High level, General purpose programming language development work."
   },
   {
     "id": 1,
@@ -13,7 +13,7 @@
     "name": "Introduction to Algorithms",
     "credit": 2,
     "price": 25000,
-    "about": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    "about": "This book provides a comprehensive introduction to the modern study of computer algorithms."
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "name": "Introduction to C++ for DSA",
     "credit": 10,
     "price": 10000,
-    "about": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    "about": "Data Structures and Algorithms are the building blocks of programming complex solutions.DSA can solve problems."
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
     "name": "Basic Data Structures",
     "credit": 5,
     "price": 35000,
-    "about": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    "about": "A data structure is a storage that is used to store and organize data. It is a way of arranging data computer."
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "name": "Introduction to OOP Python",
     "credit": 5,
     "price": 19000,
-    "about": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    "about": "It is a programming paradigm that uses objects and classes in programming. It aims to implement real-world entities."
   },
   {
     "id": 5,
@@ -45,7 +45,7 @@
     "name": "Software Engineering",
     "credit": 2,
     "price": 23000,
-    "about": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    "about": "Software Engineering is an engineering branch related to the evolution of software product using well-defined."
   },
   {
     "id": 6,
@@ -53,7 +53,7 @@
     "name": "AWS, Cloud Computing",
     "credit": 5,
     "price": 35000,
-    "about": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    "about": "AWS services offer scalable solutions for compute, storage, databases, analytics, and more. Explore all."
   },
   {
     "id": 7,
@@ -61,7 +61,7 @@
     "name": "Database (MySQL)",
     "credit": 5,
     "price": 19000,
-    "about": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    "about": "MySQL is a widely used relational database management system. MySQL is free and open-source."
   },
   {
     "id": 8,
@@ -69,6 +69,6 @@
     "name": "Problem-Solving Part",
     "credit": 2,
     "price": 23000,
-    "about": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    "about": "Problem solving is the process of identifying a problem, developing possible solution paths appropriate action."
   }
 ]
